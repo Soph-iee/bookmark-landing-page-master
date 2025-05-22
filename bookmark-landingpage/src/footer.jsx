@@ -1,4 +1,4 @@
-import logo from "../public/images/logo-bookmark.svg";
+import logo from "../public/images/logo-footerbookmark.svg";
 import facebookIcon from "../public/images/icon-facebook.svg";
 import twitterIcon from "../public/images/icon-twitter.svg";
 

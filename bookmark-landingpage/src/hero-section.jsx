@@ -1,70 +1,8 @@
-import logo from "../public/images/logo-bookmark.svg";
-import menu from "../public/images/icon-hamburger.svg";
-import heroImage from "../public/images/illustration-hero.svg"
-import { useState } from "react";
-
-function MobileNavbar() {
-  const [click, setClick] = useState(false);
-  return (
-    <>
-      <nav className="mobile-navbar">
-        <img src={logo} alt="bookmark-logo" />
-        {click && (
-          <ul className="menu-modal">
-            <li>
-              <a href="/#features"> Features</a>
-            </li>
-            <li>
-              <a href="/#pricing"> Pricing</a>
-            </li>
-            <li>
-              <a href="/#contact"> Contact</a>
-            </li>
-            <li>
-              <a href="/#login"> Login</a>
-            </li>
-          </ul>
-        )}
-        <img
-          src={menu}
-          onClick={() => {
-            setClick(!click);
-          }}
-          alt="hamburger-menu"
-        />
-      </nav>
-    </>
-  );
-}
-function DesktopNavbar() {
-  return (
-    <>
-      <nav className="desktop-navbar">
-        <img src={logo} alt="bookmark-logo" />
-        <ul>
-          <li>
-            <a href="/#features"> Features</a>
-          </li>
-          <li>
-            <a href="/#pricing"> Pricing</a>
-          </li>
-          <li>
-            <a href="/#contact"> Contact</a>
-          </li>
-          <li>
-            <a href="/#login"> Login</a>
-          </li>
-        </ul>
-      </nav>
-    </>
-  );
-}
+import heroImage from "../public/images/illustration-hero.svg";
 
 function Herosection() {
   return (
     <main>
-      <MobileNavbar />
-      <DesktopNavbar />
       <section className="hero-section">
         <img
           src={heroImage}

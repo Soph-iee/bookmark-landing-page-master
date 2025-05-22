@@ -1,6 +1,6 @@
 function Form() {
   return (
-    <form className="cta-section">
+    <form id="contact" className="cta-section">
       <p>35,000+ already joined</p>
       <h3>Stay up-to-date with what we’re doing</h3>
       <input type="email" placeholder="example@email.com" id="email" />
@@ -10,4 +10,4 @@ function Form() {
     </form>
   );
 }
- export default Form
+export default Form;

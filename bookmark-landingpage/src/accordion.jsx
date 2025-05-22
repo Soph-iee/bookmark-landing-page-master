@@ -64,6 +64,8 @@ function Accordion() {
         <p className="answer"> {open === id && answer}</p>
         <hr />
       </>
+
+      
     );
   }
 }
