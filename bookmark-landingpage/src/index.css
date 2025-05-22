@@ -9,6 +9,7 @@
     font-family: "Rubik", sans-serif;
     color: #9194a1;
     scroll-behavior: smooth;
+    font-size: 112.5%;
   }
   .container {
     max-width: 80%;
@@ -35,9 +36,6 @@
 
   .mobile-navbar {
     display: none;
-    justify-content: space-between;
-    padding-bottom: 2rem;
-    align-items: center;
   }
   /* hero-section */
   .hero-section {
@@ -54,6 +52,7 @@
     text-transform: capitalize;
     margin-bottom: 1rem;
     color: #252b46;
+    font-size: 1.8rem;
   }
   .hero-section p {
     line-height: 1.5rem;
@@ -79,6 +78,10 @@
     background-color: #5368df;
     color: #fff;
   }
+  .btn-2 {
+    box-shadow: 2px 5px 15px #9194a1;
+    color: #9194a1;
+  }
 
   /* features-section */
   .features-section h2,
@@ -100,25 +103,32 @@
     margin: 0 auto;
     width: 50%;
   }
-  .grid {
+  /* .grid {
     display: flex;
     border-bottom: 1px solid #252b46;
     align-content: center;
     justify-content: center;
     text-align: center;
-  }
+  } */
   .grid hr {
     display: none;
   }
   .features-section li {
     list-style: none;
-    /* margin: 0 4rem; */
     border-bottom: transparent 4px solid;
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
     padding: 1.25rem;
     transition: all ease-in 0.5s;
   }
   .features-section li:hover {
     cursor: pointer;
+    font-weight: bold;
+    color: #252b46;
+    /* width: 50%; */
+    justify-items: center;
+    align-items: center;
+
     border-bottom: #fa5757 4px solid;
   }
   .features-section img {

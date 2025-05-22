@@ -1,13 +1,13 @@
 import { AccordionData } from "./accordiondata";
 import openIcon from "../public/images/icon-arrow.svg";
-import closeIcon from "../public/images/icon-close.svg";
+import closeIcon from "../public/images/icon-closearrow.svg";
 import { useState } from "react";
 
 function Accordion() {
   return (
     <section className="accordion-section">
       <h2>Frequently Asked Questions</h2>
-      <p>
+      <p className="centered">
         Here are some of our FAQs. If you have any other questions you’d like
         answered please feel free to email us.
       </p>
@@ -52,6 +52,7 @@ function Accordion() {
               />
             ) : (
               <img
+                className="open-icon"
                 src={openIcon}
                 alt="close"
                 onClick={() => {
@@ -64,8 +65,6 @@ function Accordion() {
         <p className="answer"> {open === id && answer}</p>
         <hr />
       </>
-
-      
     );
   }
 }
