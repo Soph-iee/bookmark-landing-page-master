@@ -8,7 +8,8 @@
   body {
     font-size: 100%;
     font-family: "Rubik", sans-serif;
-    /* position: relative; */
+    position: relative;
+ 
   }
   img {
     display: block;
@@ -24,6 +25,7 @@
     padding-top: 2rem;
     top: 0;
     left: 0;
+    /* overflow-y: hidden; */
   }
   .menu-modal ul {
     display: flex;
@@ -39,10 +41,10 @@
   }
   .menu-modal li:hover {
     border-bottom: 1px solid transparent;
-    background-color: #9194a1aa;
+    border: 2px solid #fff;
     border-radius: 3px;
     cursor: pointer;
-    transition: all ease-in-out 0.3s;
+    transition: all ease-in 0.2s;
   }
   .menu-modal header {
     display: flex;
@@ -63,7 +65,7 @@
     /* font-weight: bold; */
     text-transform: uppercase;
   }
-  
+
   .desktop-navbar {
     display: none;
   }
@@ -239,6 +241,9 @@
 
   .socials {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
   }
 }

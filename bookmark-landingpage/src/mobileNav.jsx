@@ -13,7 +13,7 @@ function MobileNavbar() {
       <nav className="mobile-navbar">
         <img src={headerlogo} alt="bookmark-logo" />
         {click && (
-          <div className="menu-modal">
+          <div className="menu-modal" style={{ overflowY: "hidden" }}>
             <header>
               <img src={logo} alt="bookmark-logo" />
               <span>
