@@ -25,18 +25,25 @@ function Accordion() {
   );
 
   function FAQ(props) {
-    const [open, setOpen] = useState(null);
-    function openFaq(currentId) {
-      setOpen(currentId === open ? null : currentId);
+    const [open, setOpen] = useState(false);
+    function openFaq() {
+      setOpen(
+        !open
+        // currentId === open ? null : currentId
+        // (prev) => {
+        //   prev === currentId ? null : currentId;
+        // }
+      );
     }
     const { question, answer, id } = props;
     return (
       <>
         <div className="question-tab">
           <h4
-            onClick={() => {
-              openFaq(id);
-            }}
+            // onClick={() => {
+            //   openFaq();
+            // }}
+            onClick={openFaq}
           >
             {question}
           </h4>
@@ -46,9 +53,7 @@ function Accordion() {
                 className="close-icon"
                 src={closeIcon}
                 alt="open"
-                onClick={() => {
-                  openFaq(id);
-                }}
+                onClick={openFaq}
               />
             ) : (
               <img

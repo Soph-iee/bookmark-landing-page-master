@@ -82,7 +82,16 @@
     box-shadow: 2px 5px 15px #9194a1;
     color: #9194a1;
   }
-
+  .btn-1:hover,
+  .btn-2:hover,
+  .question-tab:hover, .menu-icon:hover{
+    cursor: pointer;
+  }
+  .cta-btn:hover {
+    cursor: pointer;
+    background-color: #fa5757c0;
+    transition: all ease-in-out 0.3s;
+  }
   /* features-section */
   .features-section h2,
   h3,

@@ -17,12 +17,23 @@ function MobileNavbar() {
             <header>
               <img src={logo} alt="bookmark-logo" />
               <span>
-                <img src={closeIcon} alt="" />
+                <img
+                  src={closeIcon}
+                  alt="close-menu"
+                  className="close-icon"
+                  onClick={() => {
+                    setClick(false);
+                  }}
+                />
               </span>
             </header>
-            <ul>
+            <ul
+              onClick={() => {
+                setClick(false);
+              }}
+            >
               <li>
-                <a href="/#features"> Features</a>
+                <a href="/#features">Features</a>
               </li>
               <li>
                 <a href="/#pricing"> Pricing</a>
@@ -34,7 +45,7 @@ function MobileNavbar() {
                 <a href="/#login"> Login</a>
               </li>
             </ul>
-            <footer>
+            <footer className="socials">
               <img src={facebookIcon} alt="facebook-logo" />
               <img src={twitterIcon} alt="twitter-icon" />
             </footer>
@@ -46,6 +57,7 @@ function MobileNavbar() {
             setClick(!click);
           }}
           alt="hamburger-menu"
+          className="menu-icon"
         />
       </nav>
     </>
