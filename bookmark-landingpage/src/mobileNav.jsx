@@ -3,17 +3,26 @@ import logo from "../public/images/logo-footerbookmark.svg";
 import closeIcon from "../public/images/icon-close.svg";
 import facebookIcon from "../public/images/icon-facebook.svg";
 import twitterIcon from "../public/images/icon-twitter.svg";
-import { useState } from "react";
+import React, { useState } from "react";
 import menu from "../public/images/icon-hamburger.svg";
 
+// const useBodyScrollLock = () => {
+//   React.useLayoutEffect(() => {
+//     const originalStyle = window.getComputedStyle(document.body).overflow;
+//     document.body.style.overflow = "hidden";
+//     return () => (document.body.style.overflow = originalStyle);
+//   }, []);
+// };
 function MobileNavbar() {
   const [click, setClick] = useState(false);
+  // useBodyScrollLock();
   return (
     <>
       <nav className="mobile-navbar">
         <img src={headerlogo} alt="bookmark-logo" />
         {click && (
-          <div className="menu-modal" style={{ overflowY: "hidden" }}>
+      
+          <div className="menu-modal" >
             <header>
               <img src={logo} alt="bookmark-logo" />
               <span>

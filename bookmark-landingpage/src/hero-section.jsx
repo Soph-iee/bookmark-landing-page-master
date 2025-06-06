@@ -4,12 +4,17 @@ function Herosection() {
   return (
     <main>
       <section className="hero-section">
-        <img
-          src={heroImage}
-          alt="hero-image"
-          className="hero-image"
-          onClick={() => {}}
-        />
+        <div className="image-container">
+          <img
+            src={heroImage}
+            alt="hero-image"
+            width="657"
+            height="466"
+            className="hero-image"
+            onClick={() => {}}
+          />
+        </div>
+
         <header className="header">
           <h1>a simple bookmark manager</h1>
           <p>

@@ -70,16 +70,15 @@ function Features() {
   );
 }
 
-function ExtensionSection(props) {
-  const { name, logo, version } = props;
+function ExtensionSection({ name, logo, version}) {
   return (
-    <div className="extension-card">
+    <div className="extension-card" id={name}>
       <img src={logo} alt="logo" />
       <h3> Add to {name}</h3>
       <p>Minimum version {version}</p>
       <img src={dottedline} alt="dotted-line" />
       <button className="btn-1" type="button">
-        {" "}
+        
         Add & Install Extension
       </button>
     </div>

@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
 @media (max-width: 500px) {
-  @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
   * {
     box-sizing: border-box;
     padding: 0;
@@ -9,7 +10,7 @@
     font-size: 100%;
     font-family: "Rubik", sans-serif;
     position: relative;
- 
+    scrollbar-width: smooth;
   }
   img {
     display: block;
@@ -25,7 +26,8 @@
     padding-top: 2rem;
     top: 0;
     left: 0;
-    /* overflow-y: hidden; */
+    z-index: 1000;
+    overflow-y: hidden;
   }
   .menu-modal ul {
     display: flex;
@@ -95,7 +97,15 @@
   }
   .hero-section img {
     width: 100%;
+    height: auto;
+    /* box-shadow: 10px 10px; */
+    /* background-color: red; */
   }
+  /* .image-container {
+    width: 100%;
+
+    box-shadow: 10px 10px #5368df;
+  } */
   /* features section styling */
   .features-section {
     align-self: center;
