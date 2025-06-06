@@ -11,22 +11,20 @@
   }
 
   .container {
-    max-width: 70%;
     margin: 0 auto;
+    max-width: 80%;
   }
   .menu-modal {
     display: none;
   }
 
   .desktop-navbar {
+    max-width: 80%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2rem 3rem;
-    position: sticky;
-    top: 0;
-    background-color: #fff;
-    /* box-shadow: 2px 2px 15px #9194a1; */
   }
   .desktop-navbar ul {
     list-style: none;
