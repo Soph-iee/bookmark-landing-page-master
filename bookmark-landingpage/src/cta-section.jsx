@@ -19,7 +19,7 @@ function Form() {
     setError(validateEmail(email));
   };
   const validateEmail = (email) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
     if (!email || email.length === 0) {
       return "whoops,Email is required";
     }
