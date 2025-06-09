@@ -136,7 +136,6 @@
   .features-detail {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10%;
     padding-top: 4rem;
   }
   .grid {
