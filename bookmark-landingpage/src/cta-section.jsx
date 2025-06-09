@@ -2,8 +2,8 @@ import { useState } from "react";
 
 function Form() {
   const [email, setEmail] = useState("");
-  const [popup, setPopup] = useState(false);
-  const [alert, setAlert] = useState("");
+  // const [popup, setPopup] = useState(false);
+  // const [alert, setAlert] = useState("");
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
@@ -13,9 +13,8 @@ function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email);
-    setAlert(email);
-    setPopup(true);
+    // setAlert(email);
+    // setPopup(true);
     setEmail(" ");
     setError(validateEmail(email));
   };
@@ -50,7 +49,7 @@ function Form() {
           </button>
         </section>
       </div>
-      {popup && (
+      {/* {popup && (
         <div
           className="pop-up"
           onClick={() => {
@@ -59,7 +58,7 @@ function Form() {
         >
           <p>{alert} just subscribed!</p>
         </div>
-      )}
+      )} */}
     </form>
   );
 }

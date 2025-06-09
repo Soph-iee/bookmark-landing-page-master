@@ -11,7 +11,7 @@
     scroll-behavior: smooth;
     /* position: relative; */
   }
-  .pop-up {
+  /* .pop-up {
     position: absolute;
     top: 0;
     background-color: #5368df;
@@ -19,7 +19,7 @@
     padding: 2rem;
     margin-top: 1rem;
     border-radius: 1rem;
-  }
+  } */
 
   .container {
     margin: 0 auto;

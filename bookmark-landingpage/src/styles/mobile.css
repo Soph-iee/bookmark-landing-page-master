@@ -98,6 +98,12 @@
     text-align: center;
     width: 100%;
   }
+  .hero-section h1 {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    color: #252b46;
+    font-size: 1.5rem;
+  }
   .hero-section img {
     width: 100%;
     height: auto;
@@ -242,7 +248,6 @@
   }
   .cta-section .cta-btn {
     background-color: #fa5757;
-    /* border: 1px solid transparent; */
     color: inherit;
     width: 100%;
     text-transform: capitalize;
@@ -307,7 +312,6 @@
 
   .socials {
     display: flex;
-    /* justify-content: space-around; */
     gap: 2rem;
     justify-content: center;
     align-items: center;
