@@ -23,9 +23,7 @@ function Form() {
     if (!email || email.length === 0) {
       return "whoops,Email is required";
     }
-    if (!regex.test(email)) {
-      return "Invalid email format";
-    } else return null;
+     else return null;
   };
 
   return (
