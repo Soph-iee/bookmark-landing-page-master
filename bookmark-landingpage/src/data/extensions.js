@@ -1,6 +1,6 @@
-import logoChrome from "../public/images/logo-chrome.svg";
-import logoFirefox from "../public/images/logo-firefox.svg";
-import logoOpera from "../public/images/logo-opera.svg";
+import logoChrome from '../../public/images/logo-chrome.svg'
+import logoFirefox from "../../public/images/logo-firefox.svg";
+import logoOpera from "../../public/images/logo-opera.svg";
 
 export const Extensions = [
   { name: "Chrome", logo: logoChrome, version: 65, id: 1 },

@@ -1,36 +1,21 @@
-import Featureimage1 from "../public/images/illustration-features-tab-1.svg";
+
 import dottedline from "../public/images/bg-dots.svg";
-import { Extensions } from "./extensions";
+import { Extensions } from "./data/extensions";
 import { useState } from "react";
+import { FeaturesDetails } from "./data/features";
 function Features() {
-  const [feature, setFeature] = useState({
-    header: "Bookmark in one click",
-    content:
-      "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.",
-  });
+  
+  const [details, setDetails] = useState(FeaturesDetails[0]);
+  const [active, setActive] = useState(1);
 
-  function simpleBookmark() {
-    setFeature({
-      header: "Bookmark in one click",
-      content:
-        "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.",
-    });
+  function DisplayFeature(id) {
+    const content = FeaturesDetails.find((content) => content.id === id);
+    setDetails(content);
+  }
+  function ActiveButton(id) {
+    id !== active ? setActive(id) : setActive(active);
   }
 
-  function EasySharing() {
-    setFeature({
-      header: "Share your Bookmarks",
-      content:
-        "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
-    });
-  }
-  function SpeedySearch() {
-    setFeature({
-      header: "Intelligent Search",
-      content:
-        "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.",
-    });
-  }
   return (
     <>
       <section id="features" className="features-section">
@@ -41,16 +26,29 @@ function Features() {
           them on the go.
         </p>
         <ul className="grid">
-          <li onClick={simpleBookmark}>simple bookmarking</li> <hr />
-          <li onClick={SpeedySearch}>speedy searching</li> <hr />
-          <li onClick={EasySharing}>easy sharing</li>
-          <hr />
+          {FeaturesDetails.map((detail) => {
+            return (
+              <div key={detail.id}>
+                <li
+                  className={active === detail.id ? "active" : "inactive"}
+                  onClick={() => {
+                    DisplayFeature(detail.id);
+                    ActiveButton(detail.id);
+                  }}
+                >
+                  {detail.title}
+                </li>
+                <hr />
+              </div>
+            );
+          })}
         </ul>
         <div className="features-detail">
-          <img src={Featureimage1} alt="feature-illustration" />
+          {/* <div className="image-bg">imagebg</div> */}
+          <img src={details.img} alt="feature-illustration" />
           <div className="detail-content">
-            <h2>{feature.header}</h2>
-            <p>{feature.content}</p>
+            <h2>{details.header}</h2>
+            <p>{details.content}</p>
           </div>
         </div>
       </section>
@@ -70,7 +68,7 @@ function Features() {
   );
 }
 
-function ExtensionSection({ name, logo, version}) {
+function ExtensionSection({ name, logo, version }) {
   return (
     <div className="extension-card" id={name}>
       <img src={logo} alt="logo" />
@@ -78,7 +76,6 @@ function ExtensionSection({ name, logo, version}) {
       <p>Minimum version {version}</p>
       <img src={dottedline} alt="dotted-line" />
       <button className="btn-1" type="button">
-        
         Add & Install Extension
       </button>
     </div>

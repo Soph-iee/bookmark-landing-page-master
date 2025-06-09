@@ -5,17 +5,20 @@ function DesktopNavbar() {
       <nav className="desktop-navbar">
         <img src={logo} alt="bookmark-logo" />
         <ul>
-          <li>
+          <li className="nav-btn">
             <a href="/#features"> Features</a>
           </li>
-          <li>
+          <li className="nav-btn">
             <a href="/#pricing"> Pricing</a>
           </li>
-          <li>
+          <li className="nav-btn">
             <a href="/#contact"> Contact</a>
           </li>
-          <li>
-            <a href="/#login"> Login</a>
+          <li id="login-btn">
+            <a href="/#login" id="login-btn">
+              {" "}
+              Login
+            </a>
           </li>
         </ul>
       </nav>

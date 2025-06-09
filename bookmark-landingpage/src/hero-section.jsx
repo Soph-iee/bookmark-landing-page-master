@@ -4,6 +4,7 @@ function Herosection() {
   return (
     <main>
       <section className="hero-section">
+        {/* <div className="image-bg">imagebg</div> */}
         <div className="image-container">
           <img
             src={heroImage}
@@ -11,7 +12,7 @@ function Herosection() {
             width="657"
             height="466"
             className="hero-image"
-            onClick={() => {}}
+            
           />
         </div>
 

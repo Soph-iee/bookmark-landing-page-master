@@ -1,8 +1,8 @@
 import Features from "./features";
 import Herosection from "./hero-section";
 import Accordion from "./accordion";
-import "./index.css";
-import "./mobile.css";
+import "../src/styles/index.css";
+import "../src/styles/mobile.css";
 import Form from "./cta-section";
 import Footer from "./footer";
 import MobileNavbar from "./mobileNav";
@@ -26,26 +26,12 @@ function App() {
 
 export default App;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const useBodyScrollLock = () => {
 //   React.useLayoutEffect(() => {
 //     const originalStyle = window.getComputedStyle(document.body).overflow;
 //     document.body.style.overflow = "hidden";
 //     return () => (document.body.style.overflow = originalStyle);
-//   }, []); 
+//   }, []);
 // };
 // const Modal = ({ onClose }) => {
 //   useBodyScrollLock();
@@ -84,13 +70,3 @@ export default App;
 //     </div>
 //   );
 // };
-
-
-
-
-
-
-
-
-
-
